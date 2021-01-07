@@ -1,0 +1,32 @@
+{
+  "name": "finances",
+  "version": "1.0.0",
+  "description": "",
+  "bin": {
+    "finances": "./src/index.js",
+    "finances-csv": "./src/csv-formatter/index.js",
+    "finances-wells-fargo": "./src/wells-fargo/index.js",
+    "finances-schools-first": "./src/schools-first/index.js",
+    "finances-diff": "./src/diff/index.js"
+  },
+  "main": "index.js",
+  "scripts": {
+    "lint": "eslint",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "commander": "^6.0.0",
+    "csv-parser": "^2.3.3",
+    "csv-writer": "^1.6.0",
+    "inquirer": "^7.3.2",
+    "moment": "^2.27.0",
+    "puppeteer": "^5.2.0",
+    "tmp": "^0.2.1"
+  },
+  "devDependencies": {
+    "eslint": "^7.5.0"
+  }
+}
