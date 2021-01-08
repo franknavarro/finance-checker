@@ -17,7 +17,6 @@ program
   .action((file1, file2) => {
     compareFiles = [file1, file2];
   });
-
 program.parse(process.argv);
 
 const generateDiffFiles = async (files) => {
@@ -55,7 +54,7 @@ const generateDiffFiles = async (files) => {
   console.log(options);
 
   compareFiles.forEach((file) => {
-    child_process.exec(`open ${file} -a 'Microsoft Excel'`);
+    child_process.exec(`open ${file} -a 'Numbers'`);
   });
   child_process.spawn('nvim', options, { stdio: 'inherit' }).on('exit', () => {
     diffFiles.forEach((file) => file.removeCallback());
